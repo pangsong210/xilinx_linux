@@ -253,6 +253,7 @@ static const struct dev_pm_ops uio_pdrv_genirq_dev_pm_ops = {
 
 #ifdef CONFIG_OF
 static struct of_device_id uio_of_genirq_match[] = {
+	{.compatible = "generic-uio"},
 	{ /* This is filled with module_parm */ },
 	{ /* Sentinel */ },
 };
@@ -277,3 +278,4 @@ MODULE_AUTHOR("Magnus Damm");
 MODULE_DESCRIPTION("Userspace I/O platform driver with generic IRQ handling");
 MODULE_LICENSE("GPL v2");
 MODULE_ALIAS("platform:" DRIVER_NAME);
+
